@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image: python:3.9-slim
+            image: 'python:3.9-slim'
         }
     }
 
@@ -13,7 +13,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                sh 'pytest tests/tests_app.py'
+                sh 'pytest /tests/tests_app.py'
             }
         }
 
